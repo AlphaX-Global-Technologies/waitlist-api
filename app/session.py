@@ -7,6 +7,7 @@ from typing import AsyncGenerator
 load_dotenv()
 
 DATABASE_URL = os.getenv("DATABASE_URL")
+DEV_DB = os.getenv("DEV_DB")
 
 
 engine = create_async_engine(
