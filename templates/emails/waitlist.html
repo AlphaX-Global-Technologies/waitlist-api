@@ -4,6 +4,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome to AlphaX</title>
+  <link rel="preload" as="image" href="./images/19480a79812420318421eb70d1fdbc78.png">
+  <link rel="preload" as="image" href="./images/6578aa1e19552490639491dd8243d25d.png">
+  <link rel="preload" as="image" href="./images/b0b8f281b3c22485077ba259622139ff.png">
+  <link rel="preload" as="image" href="./images/82bebe97154718587b60614486071f71.png">
+  <link rel="preload" as="image" href="./images/4a5431aea0d802c3991b9a2c44f9600c.png">
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+
+    img {
+      display: block;
+      border: 0;
+      outline: none;
+      text-decoration: none;
+      height: auto;
+      max-width: 100%;
+    }
+
+    .spacer {
+      font-size: 0;
+      line-height: 0;
+      height: 16px;
+    }
+
+    .contact-text {
+      font-size: 16px;
+      line-height: 0.65;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .contact-text a {
+      color: #9b1fe8;
+      text-decoration: underline;
+    }
+
+    .social {
+      width: 100%;
+      max-width: 560px;
+      margin: 0 auto;
+      background-color: #111111;
+    }
+
+    .social-cell {
+      width: 32.98%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 200px) {
+      .social,
+      .social-cell {
+        display: block !important;
+        width: 100% !important;
+      }
+    }
+  </style>
 </head>
 <body style="margin: 0; padding: 0; background-color: #080808; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
   <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #080808; padding: 40px 20px;">
@@ -12,8 +70,14 @@
         <table width="100%" style="max-width: 560px; background-color: #111111; border: 1px solid #222222; border-radius: 12px; padding: 40px;" cellpadding="0" cellspacing="0">
           
           <tr>
-            <td style="padding-bottom: 32px;">
-              <span style="font-size: 24px; font-weight: 700; color: #9b1fe8; letter-spacing: -0.5px;">AlphaX</span>
+            <td style="padding-bottom: 32px;" align="center">
+              <img id="brand-logo" src="images/19480a79812420318421eb70d1fdbc78.png" width="167" height="60" alt="AlphaX logo">
+            </td>
+          </tr>
+          
+          <tr>
+            <td style="padding-bottom: 32px;" align="center">
+              <img id="hero-image" src="images/6578aa1e19552490639491dd8243d25d.png" width="560" height="187" alt="AlphaX welcome banner">
             </td>
           </tr>
           
@@ -48,7 +112,9 @@
           <tr>
             <td>
               <p style="font-size: 14px; color: #71717a; margin: 0;">
-                — The AlphaX Team
+                — Best Regards,
+
+AlphaX Team💜
               </p>
             </td>
           </tr>
@@ -56,6 +122,71 @@
         </table>
       </td>
     </tr>
+    <tr>
+      <td class="spacer">&nbsp;</td>
+    </tr>
+    <tr>
+      <td>
+        <table width="100%" role="presentation" bgcolor="#111111" style="background-color:#111111;">
+          <tr>
+            <td align="center" style="padding: 5px 0;">
+              <table width="100%" role="presentation" style="max-width:600px; margin:0 auto;">
+                <tr>
+                  <td class="contact-text">For more enquiry, Contact:</td>
+                </tr>
+                <tr><td class="spacer">&nbsp;</td></tr>
+                <tr>
+                  <td class="contact-text"><a href="mailto:Support@alphaxapp.com" target="_blank" rel="noopener noreferrer">Support@alphaxapp.com</a></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td class="spacer">&nbsp;</td>
+    </tr>
+    <tr>
+      <td>
+        <table class="social" role="presentation">
+          <tr>
+            <td class="social-cell" align="center">
+              <a href="https://t.me/JoinAlphaX" target="_blank" rel="noopener nofollow">
+                <img id="telegram-icon" src="images/b0b8f281b3c22485077ba259622139ff.png" width="48" height="48" alt="Telegram">
+              </a>
+            </td>
+            <td class="social-cell" align="center">
+              <a href="https://x.com/AlphaXGlobal_" target="_blank" rel="noopener nofollow">
+                <img id="x-icon" src="images/82bebe97154718587b60614486071f71.png" width="47" height="50" alt="X">
+              </a>
+            </td>
+            <td class="social-cell" align="center">
+              <a href="https://www.facebook.com/share/1KvnTuRCMP/" target="_blank" rel="noopener nofollow">
+                <img id="facebook-icon" src="images/4a5431aea0d802c3991b9a2c44f9600c.png" width="42" height="42" alt="Facebook">
+              </a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
   </table>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var images = {
+        'brand-logo': 'images/19480a79812420318421eb70d1fdbc78.png',
+        'hero-image': 'images/6578aa1e19552490639491dd8243d25d.png',
+        'telegram-icon': 'images/b0b8f281b3c22485077ba259622139ff.png',
+        'x-icon': 'images/82bebe97154718587b60614486071f71.png',
+        'facebook-icon': 'images/4a5431aea0d802c3991b9a2c44f9600c.png'
+      };
+      Object.keys(images).forEach(function(id) {
+        var img = document.getElementById(id);
+        if (img && img.getAttribute('src') !== images[id]) {
+          img.setAttribute('src', images[id]);
+        }
+      });
+    });
+  </script>
 </body>
 </html>
