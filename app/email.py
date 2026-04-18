@@ -28,6 +28,6 @@ class EmailService:
                 "html": html_content,
             }
 
-            resend.Emails.send(params)
+            await resend.Emails.send_async(params)
         except Exception as e:
-            raise HTTPException(status_code=500, detail=f"Email sending failed: {str(e)}")
+            print(f"Error sending email: {e}")

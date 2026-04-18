@@ -1,6 +1,6 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.models import waitlistEntryCreate, waitlistResponse
-from fastapi import Depends, APIRouter
+from fastapi import Depends, APIRouter, BackgroundTasks
 from app.session import get_session
 from app.waitlist import add_to_waitlist
 from app.email import EmailService
@@ -14,17 +14,21 @@ router = APIRouter(
 @router.post("/waitlist", response_model=waitlistResponse)
 async def create_waitlist_entry(
     payload: waitlistEntryCreate,
+    background_tasks: BackgroundTasks,
     db: AsyncSession = Depends(get_session)
 ):
     """Endpoint to add a new email to the waitlist"""
 
     message = await add_to_waitlist(payload, db)
 
-    await EmailService.send_email(
-        to=payload.email,
-        subject="ALPHAX WAITLIST CONFIRMED — LET'S GO 🔥",
-        template_name="alphaX.html",
-        context={"email": payload.email}
+    background_tasks.add_task(
+
+        await EmailService.send_email(
+            to=payload.email,
+            subject="ALPHAX WAITLIST CONFIRMED — LET'S GO 🔥",
+            template_name="alphaX.html",
+            context={"email": payload.email}
+        )
     )
 
     return {
