@@ -23,7 +23,7 @@ async def create_waitlist_entry(
     await EmailService.send_email(
         to=payload.email,
         subject="ALPHAX WAITLIST CONFIRMED — LET'S GO 🔥",
-        template_name="waitlist.html",
+        template_name="alphaX.html",
         context={"email": payload.email}
     )
 
