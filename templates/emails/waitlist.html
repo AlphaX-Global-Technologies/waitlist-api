@@ -4,11 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome to AlphaX</title>
-  <link rel="preload" as="image" href="./images/19480a79812420318421eb70d1fdbc78.png">
-  <link rel="preload" as="image" href="./images/6578aa1e19552490639491dd8243d25d.png">
-  <link rel="preload" as="image" href="./images/b0b8f281b3c22485077ba259622139ff.png">
-  <link rel="preload" as="image" href="./images/82bebe97154718587b60614486071f71.png">
-  <link rel="preload" as="image" href="./images/4a5431aea0d802c3991b9a2c44f9600c.png">
   <style>
     table {
       border-collapse: collapse;
@@ -171,22 +166,5 @@ AlphaX Team💜
       </td>
     </tr>
   </table>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var images = {
-        'brand-logo': 'images/19480a79812420318421eb70d1fdbc78.png',
-        'hero-image': 'images/6578aa1e19552490639491dd8243d25d.png',
-        'telegram-icon': 'images/b0b8f281b3c22485077ba259622139ff.png',
-        'x-icon': 'images/82bebe97154718587b60614486071f71.png',
-        'facebook-icon': 'images/4a5431aea0d802c3991b9a2c44f9600c.png'
-      };
-      Object.keys(images).forEach(function(id) {
-        var img = document.getElementById(id);
-        if (img && img.getAttribute('src') !== images[id]) {
-          img.setAttribute('src', images[id]);
-        }
-      });
-    });
-  </script>
 </body>
 </html>
